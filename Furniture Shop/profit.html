@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="window.print()" >print</button>
+    <div id="prft" style="text-align: center; font-size: 5em">Account</div>
+
+    <!-- chair -->
+    <div id="chair" style="font-size: 3em; position: relative; left: 100px">
+      Chair
+    </div>
+    <table border="1" height="170px" width="1000px" style="font-size: 2em">
+      <thead>
+        <th>Material Cost</th>
+        <th>Labour Cost</th>
+        <th>Price</th>
+
+        <th>Profit</th>
+      </thead>
+      <tbody>
+        <td><input type="number" value="" id="a" /></td>
+        <td><input type="number" value="" id="b" /></td>
+        <td><input type="number" value="" id="c" /></td>
+
+        <td><div id="d"></div></td>
+      </tbody>
+    </table>
+    <button
+      onclick="fn1()"
+      style="
+        position: relative;
+        bottom: 120px;
+        left: 1050px;
+        height: 100px;
+        width: 100px;
+      "
+    >
+      Cal
+    </button>
+
+    <!-- sopha -->
+
+    <div id="chair" style="font-size: 3em; position: relative; left: 100px">
+      Sofa
+    </div>
+    <table border="1" height="170px" width="1000px" style="font-size: 2em">
+      <thead>
+        <th>Material Cost</th>
+        <th>Labour Cost</th>
+        <th>Price</th>
+
+        <th>Profit</th>
+      </thead>
+      <tbody>
+        <td><input type="number" value="" id="i" /></td>
+        <td><input type="number" value="" id="j" /></td>
+        <td><input type="number" value="" id="k" /></td>
+
+        <td><div id="l"></div></td>
+      </tbody>
+    </table>
+
+    <button
+      onclick="fn2()"
+      style="
+        position: relative;
+        bottom: 120px;
+        left: 1050px;
+        height: 100px;
+        width: 100px;
+      "
+    >
+      Cal
+    </button>
+
+    <!-- Table -->
+
+    <div id="chair" style="font-size: 3em; position: relative; left: 100px">
+      Table
+    </div>
+    <table border="1" height="170px" width="1000px" style="font-size: 2em">
+      <thead>
+        <th>Material Cost</th>
+        <th>Labour Cost</th>
+        <th>Price</th>
+
+        <th>Profit</th>
+      </thead>
+      <tbody>
+        <td><input type="number" value="" id="q" /></td>
+        <td><input type="number" value="" id="r" /></td>
+        <td><input type="number" value="" id="s" /></td>
+
+        <td><div id="t"></div></td>
+      </tbody>
+    </table>
+
+    <button
+      onclick="fn3()"
+      style="
+        position: relative;
+        bottom: 120px;
+        left: 1050px;
+        height: 100px;
+        width: 100px;
+      "
+    >
+      Cal
+    </button>
+
+    <!-- bed -->
+
+    <div id="chair" style="font-size: 3em; position: relative; left: 100px">
+      Bed
+    </div>
+    <table border="1" height="170px" width="1000px" style="font-size: 2em">
+      <thead>
+        <th>Material Cost</th>
+        <th>Labour Cost</th>
+        <th>Price</th>
+
+        <th>Profit</th>
+      </thead>
+      <tbody>
+        <td><input type="number" value="" id="y" /></td>
+        <td><input type="number" value="" id="z" /></td>
+        <td><input type="number" value="" id="aa" /></td>
+
+        <td><div id="bb"></div></td>
+      </tbody>
+    </table>
+
+    <button
+      onclick="fn4()"
+      style="
+        position: relative;
+        bottom: 120px;
+        left: 1050px;
+        height: 100px;
+        width: 100px;
+      "
+    >
+      Cal
+    </button>
+
+    <!-- temple -->
+
+    <div id="chair" style="font-size: 3em; position: relative; left: 100px">
+      Temple
+    </div>
+    <table border="1" height="170px" width="1000px" style="font-size: 2em">
+      <thead>
+        <th>Material Cost</th>
+        <th>Labour Cost</th>
+        <th>Price</th>
+
+        <th>Profit</th>
+      </thead>
+      <tbody>
+        <td><input type="number" value="" id="gg" /></td>
+        <td><input type="number" value="" id="hh" /></td>
+        <td><input type="number" value="" id="ii" /></td>
+
+        <td><div id="jj"></div></td>
+      </tbody>
+    </table>
+
+    <button
+      onclick="fn5()"
+      style="
+        position: relative;
+        bottom: 120px;
+        left: 1050px;
+        height: 100px;
+        width: 100px;
+      "
+    >
+      Cal
+    </button>
+<div>
+    <span id="final" style="font-size: 4em; position: relative; left: 900px;">Total Profit</span>
+<div id="final button" style="position: relative; left:920px;top:10px; border: solid 1px black ; display: inline-block;height:50px; width: 150px;" onclick="get()"></div> </div>
+  </body>
+  <script>
+    var h,p,x,ff,nn;
+    function fn1() {
+      var e = parseInt(document.getElementById("a").value);
+      var f = parseInt(document.getElementById("b").value);
+      var g = parseInt(document.getElementById("c").value);
+      h = parseInt(g - (e + f));
+      document.getElementById("d").innerHTML = parseInt(h);
+
+    }
+
+    function fn2() {
+      var m = parseInt(document.getElementById("i").value);
+      var n = parseInt(document.getElementById("j").value);
+      var o = parseInt(document.getElementById("k").value);
+      p = parseInt(o - (m + n));
+      document.getElementById("l").innerHTML = parseInt(p);
+    }
+
+    function fn3() {
+      var u = parseInt(document.getElementById("q").value);
+      var v = parseInt(document.getElementById("r").value);
+      var w = parseInt(document.getElementById("s").value);
+      x = parseInt(w - (u + v));
+      document.getElementById("t").innerHTML = parseInt(x);
+    }
+
+    function fn4() {
+      var cc = parseInt(document.getElementById("y").value);
+      var dd = parseInt(document.getElementById("z").value);
+      var ee = parseInt(document.getElementById("aa").value);
+      ff = parseInt(ee - (cc + dd));
+      document.getElementById("bb").innerHTML = parseInt(ff);
+    }
+
+    function fn5() {
+      var kk = parseInt(document.getElementById("gg").value);
+      var ll = parseInt(document.getElementById("hh").value);
+      var mm = parseInt(document.getElementById("ii").value);
+      nn = parseInt(mm - (kk + ll));
+      document.getElementById("jj").innerHTML = parseInt(nn);
+
+    }
+
+    function get(){
+        var total=parseInt(h+p+x+ff+nn);
+        document.getElementById("final button").innerHTML=total;
+    }
+  </script>
+</html>

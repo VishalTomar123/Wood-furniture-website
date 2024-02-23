@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    
+    <div style="position:absolute; left:500px; top:100px; box-shadow:10px 10px 10px 10px gray; height:500px; width:500px; ">
+        <img src="chop-wood.gif" style="height:390px; width:190px; background-size:100% 100%; position:relative; left:43px; top:50px;">
+        <div style=" position:relative; bottom:300px; left:270px;">
+        <form action="index.html" target="_self">
+        <span ><b>Name:</b></span><br><input type="text" placeholder="Enter name"  id="c" required><br><br>
+        <span ><b>Email:</b></span><br><input type="email" placeholder="Enter the Email address"  id="a" required><br><br>
+        <span><b>Password:</b></span><br><input type="password" placeholder="Enter the password" id="b" required><br><br>
+        <input style="background-color:red; width:100px; margin-left:20px;" type="submit" value="SignUp" >
+        </form>
+        </div>
+        </div>
+    <script>
+        $("document").ready(function(){
+        $("#c").click(function(){
+        var a1=$("#a").val();
+        var a2=$("#b").val();
+        var a3=$("#c").val();
+        if(a1=="" || a2=="" || a3==""){
+        alert("This field to fill mandatary");
+        }
+        });
+        });
+    
+    </script>
+</body>
+</html>

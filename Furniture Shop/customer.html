@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomerBill</title>
+</head>
+
+<body>
+    <div style=" width: 800px; height: 700px; position: absolute; left: 50px;">
+        <h2 style="text-align: center;">Wood Manufacture </h2>
+        <h2 style="text-align: center;">Bill Receipt </h2>
+        <form>
+            Customer Name:<input type="text" value="" width="500px"><br><br>
+            Customer Address:<input type="text" value="" width="500px"><br><br>
+            Customer Phone No.<input type="number" value=""><br><br>
+            Date:<input type="date"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ref#:<input type="number" id="aaa">
+        </form><br>
+        <table border="1" style="height: 400px; margin-left:50px ;">
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Amount</th>
+            </tr>
+            <tr>
+                <td>
+                <select id="b1">
+                    <option>chair</option>
+                    <option>table</option>
+                    <option>sofa</option>
+                    <option>temple</option>
+                    <option>bed</option>
+                </select></td>
+                <td>
+                    <div id="c1" style="text-align: center; width: 100px;"> </div>
+                </td>
+                <td><input type="number" value="" id="d1" onkeyup="bca()"></td>
+                <td>
+                    <div id="a1"  style="border:solid; text-align: center; height: 20px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><select id="b2">
+                    <option>chair</option>
+                    <option>table</option>
+                    <option>sofa</option>
+                    <option>temple</option>
+                    <option>bed</option>
+                </select></td>
+                <td>
+                    <div id="c2" style="text-align: center;"> </div>
+                </td>
+                <td><input type="number" value="" id="d2" onkeyup="bca1()"></td>
+                <td>
+                    <div id="a2"  style="border:solid; text-align: center; height: 20px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><select id="b3">
+                    <option>chair</option>
+                    <option>table</option>
+                    <option>sofa</option>
+                    <option>temple</option>
+                    <option>bed</option>
+                </select></td>
+                <td>
+                    <div id="c3" style="text-align: center;"> </div>
+                </td>
+                <td><input type="number" value="" id="d3" onkeyup="bca2()"></td>
+                <td>
+                    <div id="a3"  style="border:solid; text-align: center; height: 20px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><select id="b4">
+                    <option>chair</option>
+                    <option>table</option>
+                    <option>sofa</option>
+                    <option>temple</option>
+                    <option>bed</option>
+                </select></td>
+                <td>
+                    <div id="c4" style="text-align: center;"> </div>
+                </td>
+                <td><input type="number" value="" id="d4" onkeyup="bca3()"></td>
+                <td>
+                    <div id="a4"  style="border:solid; text-align: center; height: 20px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><select id="b5">
+                    <option>chair</option>
+                    <option>table</option>
+                    <option>sofa</option>
+                    <option>temple</option>
+                    <option>bed</option>
+                </select></td>
+                <td>
+                    <div id="c5" style=" text-align: center;"> </div>
+                </td>
+                <td><input type="number" value="" id="d5" onkeyup="bca4()"></td>
+                <td>
+                    <div id="a5"  style="border:solid; text-align: center; height: 20px;"></div>
+                </td>
+            </tr>
+        </table><br><br>
+        <div style="position: absolute; left:320px;">
+            <span>Total Amount:</span>
+            <div id="bbb" onclick="sum()"
+                style="border: 1px solid rgb(19, 18, 18); width: 100px; height:20px; position:relative; left: 95px; top:-20px;">
+            </div>
+        </div>
+    </div>
+    <button onclick="window.print()">Print</button>
+</body>
+<script>
+
+    //Total Amount
+var A1,A2,A3,A4,A5;
+    // Row 1
+
+    function bca() {
+        var z = document.getElementById("b1").value;
+        if (z == "chair") {
+
+            var P = document.getElementById("c1").innerHTML = 250;
+        }
+        if (z == "table") {
+            var P = document.getElementById("c1").innerHTML = 450;
+        }
+        if (z == "sofa") {
+            var P = document.getElementById("c1").innerHTML = 500;
+        }
+        if (z == "temple") {
+            var P = document.getElementById("c1").innerHTML = 200;
+        }
+        if (z == "bed") {
+            var P = document.getElementById("c1").innerHTML = 1000;
+        }
+        var Q = document.getElementById("d1").value;
+        A1=document.getElementById("a1").innerHTML = (P * Q);
+
+
+    }
+
+    // row 2
+
+    function bca1() {
+        var B = document.getElementById("b2").value;
+        if (B == "chair") {
+            var R = document.getElementById("c2").innerHTML = 250;
+        }
+        if (B == "table") {
+            var R = document.getElementById("c2").innerHTML = 450;
+        }
+        if (B == "sofa") {
+
+            var R = document.getElementById("c2").innerHTML = 500;
+        }
+        if (B == "temple") {
+            var R = document.getElementById("c2").innerHTML = 200;
+        }
+        if (B == "bed") {
+            var R = document.getElementById("c2").innerHTML = 1000;
+        }
+        var S = document.getElementById("d2").value;
+        A2=document.getElementById("a2").innerHTML = (R * S);
+
+    }
+
+    // Row 3
+
+    function bca2() {
+        var C = document.getElementById("b3").value;
+        if (C == "chair") {
+            var T = document.getElementById("c3").innerHTML = 250;
+        }
+        if (C == "table") {
+            var T = document.getElementById("c3").innerHTML = 450;
+        }
+        if (C == "sofa") {
+            var T = document.getElementById("c3").innerHTML = 500;
+        }
+        if (C == "temple") {
+            var T = document.getElementById("c3").innerHTML = 200;
+        }
+        if (C == "bed") {
+            var T = document.getElementById("c3").innerHTML = 1000;
+        }
+        var U = document.getElementById("d3").value;
+        A3 = document.getElementById("a3").innerHTML = (U * T);
+    }
+
+    // Row 4
+
+    function bca3() {
+        var D = document.getElementById("b4").value;
+        if (D == "chair") {
+            var V = document.getElementById("c4").innerHTML = 250;
+        }
+        if (D == "table") {
+            var V = document.getElementById("c4").innerHTML = 450;
+        }
+        if (D == "sofa") {
+            var V = document.getElementById("c4").innerHTML = 500;
+        }
+        if (D == "temple") {
+            var V = document.getElementById("c4").innerHTML = 200;
+        }
+        if (D == "bed") {
+            var V = document.getElementById("c4").innerHTML = 1000;
+        }
+        var W = document.getElementById("d4").value;
+        A4 = document.getElementById("a4").innerHTML = (V * W);
+    }
+
+    // row 5
+var s=0;
+    function bca4() {
+        var E = document.getElementById("b5").value;
+        
+        if (E == "chair") {
+            var X = document.getElementById("c5").innerHTML = 250;
+        }
+        if (E == "table") {
+            var X = document.getElementById("c5").innerHTML = 450;
+        }
+        if (E == "sofa") {
+            var X = document.getElementById("c5").innerHTML = 500;
+        }
+        if (E == "temple") {
+            var X = document.getElementById("c5").innerHTML = 200;
+        }
+        if (E == "bed") {
+            var X = document.getElementById("c5").innerHTML = 1000;
+        }
+        var Y = document.getElementById("d5").value;
+        A5 = document.getElementById("a5").innerHTML = (X * Y);
+
+    }
+
+    function sum() {
+        var K = document.getElementById("a1").innerHTML;
+        var L = document.getElementById("a2").innerHTML;
+        var M = document.getElementById("a3").innerHTML;
+        var N = document.getElementById("a4").innerHTML;
+        var O = document.getElementById("a5").innerHTML;
+        var total = parseInt(K) + parseInt(L) + parseInt(M) + parseInt(N) + parseInt(O);
+        document.getElementById("bbb").innerHTML = total;
+        alert(total);
+    }
+
+
+</script>
+
+</html>
